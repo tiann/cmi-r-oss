@@ -1,0 +1,13 @@
+menu "RmNet extensions"
+
+source "techpack/data/drivers/rmnet/Kconfig"
+
+menu "Generic software bridge"
+
+source "techpack/data/drivers/generic-sw-bridge/Kconfig"
+
+menu "Emac gigabit ethernet controller driver"
+
+source "techpack/data/drivers/emac-dwc-eqos/Kconfig"
+
+endmenu
