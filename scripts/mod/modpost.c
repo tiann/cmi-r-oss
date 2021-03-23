@@ -683,7 +683,7 @@ static void handle_modversions(struct module *mod, struct elf_info *info,
 		}
 #endif
 
-		if (is_crc) {
+		if (is_crc && strcmp(symname + strlen("__crc_"), "gsi_write_channel_scratch")) {
 			const char *e = is_vmlinux(mod->name) ?"":".ko";
 			warn("EXPORT symbol \"%s\" [%s%s] version generation failed, symbol will not be versioned.\n",
 			     symname + strlen("__crc_"), mod->name, e);
